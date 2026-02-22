@@ -1,21 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import "./App.css";
 
-const icons = {
-  sunny: (
-    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="32" cy="32" r="12" fill="#FFD93D" />
-      {[0,45,90,135,180,225,270,315].map((deg,i) => (
-        <line key={i}
-          x1={32 + 18*Math.cos(deg*Math.PI/180)}
-          y1={32 + 18*Math.sin(deg*Math.PI/180)}
-          x2={32 + 25*Math.cos(deg*Math.PI/180)}
-          y2={32 + 25*Math.sin(deg*Math.PI/180)}
-          stroke="#FFD93D" strokeWidth="3" strokeLinecap="round"/>
-      ))}
-    </svg>
-  ),
-};
+
 
 function getWeatherInfo(code, isDay = true) {
   const sunny = (
